@@ -22,9 +22,9 @@ def do_pack():
 
 def do_deploy(archive_path):
     """distribution of an archive to the webservers"""
-     if exists(archive_path) is False:
-         return False
-     try:
+    if exists(archive_path) is False:
+        return False
+    try:
          file_n = archive_path.split("/")[-1]
          no_ext = file_n.split(".")[0]
          path = "/data/web_static/releases/"

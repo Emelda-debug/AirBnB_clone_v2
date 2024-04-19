@@ -7,7 +7,7 @@ Routes:
 """
 from flask import Flask
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 
 @app.route("/", strict_slashes=False)
@@ -16,5 +16,5 @@ def hello_hbnb():
     return "Hello HBNB!"
 
 
-if _name_ == "_main_":
-    app.run(host="0.0.0.0")
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)

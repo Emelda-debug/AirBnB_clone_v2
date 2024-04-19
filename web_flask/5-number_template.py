@@ -13,7 +13,7 @@ Routes:
 from flask import Flask
 from flask import render_template
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 
 @app.route("/", strict_slashes=False)
@@ -61,5 +61,5 @@ def number_template(n):
     return render_template("5-number.html", n=n)
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(host="0.0.0.0")
